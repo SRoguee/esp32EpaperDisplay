@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name=viewport content="width=device-width, initial-sclae=1">
+  <title></title>
+  <link href="static/style.css" rel="stylesheet" />
+</head>
+<style src="static/style.css"></style>
+<body class="noise">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <div id="header" class="noise">
+	<div id="titleContain">
+  		<h1>Epaper Image Uploader</h1>
+  		<form method="post" action="/upload"
+    		enctype="multipart/form-data">
+    
+    		<input type="file" id="imageFile" name="image"
+     		accept="image/*,.jpg,.jpeg,.png,.heic,.svg,.webp"
+      		multiple><br><br>
+
+    		<button onclick=handleUpload() id="submitButton" name="submitButton">Submit</button><br><br>
+  		</form>
+	</div>
+  </div>
+  <div id="preview">
+  </div>
+  <script src="static/script.js"></script>
+</body>
+</html>
