@@ -11,7 +11,7 @@ def upload_file():
     print(request.files.getlist("image"))
     files = request.files.getlist("image")
     print(files[0])
-    if (files[0] == "<FileStorage: '' ('application/octet-stream')>"):
+    if (files[0] != "<FileStorage: '' ('application/octet-stream')>"):
         for file in files:
             file.save("/home/srogue/epaper/friends/newImages/" + file.filename)
         return 'File uploaded successfully!'
